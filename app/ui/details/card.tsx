@@ -51,21 +51,21 @@ export default function PokemonDetailsCard({ name } :
     }
 
     return (
-        <main className={`${handjet.className} flex flex-col mx-3 md:mx-auto main-responsive rounded-3xl sm:flex-row bg-white max-w-screen-md mt-20 p-10 relative md:rounded-3xl`}>
-            <header className="flex flex-col p-5">
+        <main className={`${handjet.className} flex flex-col mx-3 md:mx-auto main-responsive rounded-3xl md:flex-row bg-white max-w-screen-md mt-20 p-10 relative md:rounded-3xl`}>
+            <header className="flex flex-col p-5 md:w-[400px]">
                 <h1 className="text-pokemon-name text-red-pokedex text-center mb-5">#{pokemonData.id} {titleString(name)}</h1>
                 <div className="flex justify-around items-end">
                     <Image
                         src={pokemonData.sprites.other['official-artwork']['front_default']}
                         alt={`${pokemonData.name} official artwork`}
-                        width={100}
-                        height={100}
+                        width={120}
+                        height={120}
                     />
                     <Image 
                         src={pokemonData.sprites.other['official-artwork']['front_shiny']}
                        alt={`${pokemonData.name} shiny official artwork`}
-                        width={100}
-                        height={100}
+                        width={120}
+                        height={120}
                     />
                 </div>
             </header>
@@ -74,7 +74,7 @@ export default function PokemonDetailsCard({ name } :
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
             </svg>
             </Link>
-            <article className="text-black pt-10 sm:pl-10">
+            <article className="text-black pt-10 sm:pl-10 text-2xl">
                 <p>Height: {pokemonData.height} dm.</p>
                 <p>Weight: {pokemonData.weight} hg.</p>
                 <div className="flex gap-1">
